@@ -90,7 +90,7 @@ const HeroSection = () => {
           </div>
         </div>
 
-        <div ref={headlineRef} className="text-center space-y-4 max-w-5xl mx-auto -mt-24 relative z-20">
+        <div ref={headlineRef} className="text-center space-y-4 max-w-5xl mx-auto -mt-32 relative z-20">
           <h1 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-orbitron font-light text-foreground tracking-wide leading-relaxed">
             Welcome to Autonyze — Where Intelligence Meets Aesthetics.
           </h1>
