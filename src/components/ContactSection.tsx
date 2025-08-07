@@ -52,7 +52,7 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <div className="font-medium text-foreground">Visit us</div>
-                  <div className="text-muted-foreground">San Francisco, CA</div>
+                  <div className="text-muted-foreground">Jaipur, India</div>
                 </div>
               </div>
             </div>

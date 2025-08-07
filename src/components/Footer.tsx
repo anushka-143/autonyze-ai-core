@@ -32,11 +32,11 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold text-foreground mb-4">Connect</h4>
             <div className="space-y-2">
-              <a href="mailto:hello@autonyze.com" className="block text-muted-foreground hover:text-foreground transition-colors">
-                hello@autonyze.com
+              <a href="mailto:anushkatomar555@gmail.com" className="block text-muted-foreground hover:text-foreground transition-colors">
+                anushkatomar555@gmail.com
               </a>
-              <a href="tel:+15551234567" className="block text-muted-foreground hover:text-foreground transition-colors">
-                +1 (555) 123-4567
+              <a href="tel:+17624658869" className="block text-muted-foreground hover:text-foreground transition-colors">
+                +1 (762) 465-8869
               </a>
             </div>
           </div>
