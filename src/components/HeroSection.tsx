@@ -74,7 +74,7 @@ const HeroSection = () => {
       ))}
 
       {/* Main Content Container */}
-      <div className="relative z-10 flex-1 flex flex-col justify-center px-4 space-y-6">
+      <div className="relative z-10 flex-1 flex flex-col justify-center px-4 space-y-2">
         
         {/* Spline 3D Model - Larger and Prominent */}
         <div ref={splineRef} className="w-full max-w-6xl mx-auto">
