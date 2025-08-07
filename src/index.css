@@ -7,42 +7,42 @@
 
 @layer base {
   :root {
-    /* Rich Black & Sapphire Blue Palette */
-    --background: 0 0% 5%; /* Rich deep black #0D0D0D */
-    --foreground: 0 0% 100%; /* Crisp white #FFFFFF */
+    /* Dark Slate Grey & Rose Quartz Palette */
+    --background: 200 20% 23%; /* Dark slate grey #2F3E46 */
+    --foreground: 15 70% 90%; /* Light rose quartz #F7D1CD */
 
-    --card: 0 0% 2%; /* Deeper black for cards */
-    --card-foreground: 0 0% 100%;
+    --card: 200 20% 15%; /* Darker slate for cards */
+    --card-foreground: 15 70% 90%;
 
-    --popover: 0 0% 2%;
-    --popover-foreground: 0 0% 100%;
+    --popover: 200 20% 15%;
+    --popover-foreground: 15 70% 90%;
 
-    --primary: 0 0% 100%; /* Crisp white primary */
-    --primary-foreground: 0 0% 5%;
+    --primary: 15 70% 90%; /* Light rose quartz primary */
+    --primary-foreground: 200 20% 23%;
 
-    --secondary: 0 0% 2%; /* Deeper black secondary */
-    --secondary-foreground: 0 0% 100%;
+    --secondary: 200 20% 15%; /* Darker slate secondary */
+    --secondary-foreground: 15 70% 90%;
 
-    --muted: 0 0% 2%;
-    --muted-foreground: 0 0% 70%; /* Light grey for muted text */
+    --muted: 200 20% 15%;
+    --muted-foreground: 15 40% 75%; /* Muted rose tone */
 
-    --accent: 220 85% 39%; /* Deep sapphire blue #0F52BA */
-    --accent-foreground: 0 0% 100%;
+    --accent: 345 30% 58%; /* Muted rose gold #B76E79 */
+    --accent-foreground: 15 70% 90%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 100%;
+    --destructive-foreground: 15 70% 90%;
 
-    --border: 220 85% 20%; /* Darker sapphire for borders */
-    --input: 0 0% 2%;
-    --ring: 220 85% 39%;
+    --border: 345 30% 35%; /* Darker rose gold for borders */
+    --input: 200 20% 15%;
+    --ring: 345 30% 58%;
 
     --radius: 0.75rem;
 
-    /* Black & Sapphire Design Tokens */
-    --hero-gradient: linear-gradient(135deg, hsl(220 85% 39% / 0.1), hsl(0 0% 5% / 0.05));
-    --spotlight-gradient: radial-gradient(ellipse at center, hsl(220 85% 39% / 0.12) 0%, hsl(0 0% 5%) 70%);
-    --glow-subtle: 220 85% 39%;
-    --shadow-minimal: 0 0% 0%;
+    /* Slate Grey & Rose Gold Design Tokens */
+    --hero-gradient: linear-gradient(135deg, hsl(345 30% 58% / 0.1), hsl(200 20% 23% / 0.05));
+    --spotlight-gradient: radial-gradient(ellipse at center, hsl(345 30% 58% / 0.12) 0%, hsl(200 20% 23%) 70%);
+    --glow-subtle: 345 30% 58%;
+    --shadow-minimal: 200 20% 10%;
     
     /* Typography Scale */
     --font-hero: 4.5rem;
