@@ -80,17 +80,17 @@ const HeroSection = () => {
       {/* Fullscreen Spline 3D Model */}
       <div ref={splineRef} className="absolute inset-0 w-full h-full">
         <iframe 
-          src='https://my.spline.design/nexbotrobotcharacterconcept-3LhW415c8qkut9hPrcrO59hL/' 
+          src='https://my.spline.design/genkubgreetingrobot-o4Z8mTIONq4TDkIyWTc2Al77/' 
           frameBorder='0' 
           width='100%' 
           height='100%'
           className="w-full h-full"
-          title="Autonyze Nexbot"
+          title="Autonyze AI Agent"
         />
       </div>
 
       {/* Content Overlay */}
-      <div className="relative z-20 w-full h-full flex flex-col items-center justify-center text-center px-4">
+      <div className="relative z-20 w-full h-full flex flex-col items-center justify-end pb-32 text-center px-4">
         {/* Large Animated Headline */}
         <h1 
           ref={headlineRef}
