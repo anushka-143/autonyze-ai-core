@@ -18,10 +18,10 @@ const SolutionsSection = () => {
     },
     {
       icon: MapPin,
-      title: "Multi-Agent Trip Planner",
-      description: "Intelligent travel planning with multiple AI agents",
-      features: ["Real-time optimization", "Budget management", "Preference learning"],
-      highlight: "Smart Coordination"
+      title: "Virtual Try-On",
+      description: "AI-powered virtual fitting and product visualization",
+      features: ["Real-time rendering", "Body measurement", "Style recommendations"],
+      highlight: "Immersive Experience"
     },
     {
       icon: Zap,

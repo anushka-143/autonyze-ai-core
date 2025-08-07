@@ -1,44 +1,52 @@
 import { Mail, Phone, MapPin, ArrowRight } from "lucide-react";
+import ContactForm from "./ContactForm";
 
 const ContactSection = () => {
   return (
     <section id="contact" className="py-24 relative">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
-          {/* Left Side - Content */}
-          <div className="space-y-8">
-            <div>
-              <h2 className="display-title text-foreground mb-4">
-                Ready to Transform Your Business?
-              </h2>
-              <p className="text-xl text-muted-foreground leading-relaxed">
-                Let's discuss how AI automation can revolutionize your operations and drive unprecedented growth.
-              </p>
-            </div>
+        <div className="text-center mb-16">
+          <h2 className="display-title text-foreground mb-4">
+            Ready to Transform Your Business?
+          </h2>
+          <p className="text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto">
+            Let's discuss how AI automation can revolutionize your operations and drive unprecedented growth.
+          </p>
+        </div>
 
+        <div className="grid lg:grid-cols-2 gap-16 items-start">
+          {/* Left Side - Contact Methods */}
+          <div className="space-y-8">
             {/* Contact Methods */}
             <div className="space-y-6">
-              <div className="flex items-center space-x-4">
+              <div className="flex items-center space-x-4 p-4 bg-card rounded-xl border border-border hover:border-accent transition-colors">
                 <div className="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center">
                   <Mail className="w-5 h-5 text-accent" />
                 </div>
                 <div>
                   <div className="font-medium text-foreground">Email us</div>
-                  <div className="text-muted-foreground">hello@autonyze.com</div>
+                  <a 
+                    href="mailto:anushkatomar555@gmail.com"
+                    className="text-muted-foreground hover:text-accent transition-colors"
+                  >
+                    anushkatomar555@gmail.com
+                  </a>
                 </div>
               </div>
               
-              <div className="flex items-center space-x-4">
+              <div className="flex items-center space-x-4 p-4 bg-card rounded-xl border border-border hover:border-accent transition-colors">
                 <div className="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center">
                   <Phone className="w-5 h-5 text-accent" />
                 </div>
                 <div>
-                  <div className="font-medium text-foreground">Call us</div>
-                  <div className="text-muted-foreground">+1 (555) 123-4567</div>
+                  <div className="font-medium text-foreground">Call Voice Agent</div>
+                  <a href="tel:+17624658869" className="text-muted-foreground hover:text-accent transition-colors text-lg font-medium">
+                    +1 (762) 465-8869
+                  </a>
                 </div>
               </div>
               
-              <div className="flex items-center space-x-4">
+              <div className="flex items-center space-x-4 p-4 bg-card rounded-xl border border-border">
                 <div className="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center">
                   <MapPin className="w-5 h-5 text-accent" />
                 </div>
@@ -67,40 +75,43 @@ const ContactSection = () => {
                 </div>
               </div>
             </div>
-          </div>
 
-          {/* Right Side - CTA Card */}
-          <div className="relative">
-            <div className="bg-card border border-border rounded-3xl p-8 card-elevated">
-              <div className="text-center space-y-6">
-                <div className="w-16 h-16 bg-accent/10 rounded-2xl flex items-center justify-center mx-auto">
-                  <ArrowRight className="w-8 h-8 text-accent" />
+            {/* Quick CTA Card */}
+            <div className="bg-card border border-border rounded-2xl p-6 card-elevated">
+              <div className="text-center space-y-4">
+                <div className="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center mx-auto">
+                  <ArrowRight className="w-6 h-6 text-accent" />
                 </div>
                 
                 <div>
-                  <h3 className="text-2xl font-bold text-foreground mb-2">
-                    Start Your AI Journey
+                  <h3 className="text-xl font-bold text-foreground mb-2">
+                    Immediate Assistance
                   </h3>
-                  <p className="text-muted-foreground">
-                    Book a free consultation to explore how AI can transform your business
+                  <p className="text-muted-foreground text-sm">
+                    Talk to our AI voice agent right now
                   </p>
                 </div>
 
-                <button className="cta-button w-full group">
+                <a 
+                  href="tel:+17624658869"
+                  className="cta-button w-full group block text-center"
+                >
                   <span className="flex items-center justify-center space-x-2">
-                    <span>Book Free Consultation</span>
-                    <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-200" />
+                    <span>Call Voice Agent Now</span>
+                    <Phone className="w-5 h-5 group-hover:scale-110 transition-transform duration-200" />
                   </span>
-                </button>
+                </a>
 
-                <div className="text-sm text-muted-foreground">
-                  No commitment • 30-minute session • Immediate value
+                <div className="text-xs text-muted-foreground">
+                  Available 24/7 • Instant response • No waiting
                 </div>
               </div>
             </div>
+          </div>
 
-            {/* Background Glow */}
-            <div className="absolute inset-0 bg-accent/20 blur-3xl rounded-3xl scale-110 opacity-20"></div>
+          {/* Right Side - Contact Form */}
+          <div>
+            <ContactForm />
           </div>
         </div>
       </div>
