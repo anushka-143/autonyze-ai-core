@@ -7,41 +7,41 @@
 
 @layer base {
   :root {
-    /* Smoky Minimalism Palette */
-    --background: 0 0% 9%; /* Very dark smoky grey #181818 */
-    --foreground: 0 0% 94%; /* Off-white #EFEFEF */
+    /* Deep Charcoal & Copper Palette */
+    --background: 0 0% 7%; /* Deep dark charcoal black #121212 */
+    --foreground: 40 100% 97%; /* Warm white #FFF8F0 */
 
-    --card: 0 0% 0%; /* Matte black for cards */
-    --card-foreground: 0 0% 94%;
+    --card: 0 0% 0%; /* Pure black for cards */
+    --card-foreground: 40 100% 97%;
 
     --popover: 0 0% 0%;
-    --popover-foreground: 0 0% 94%;
+    --popover-foreground: 40 100% 97%;
 
-    --primary: 0 0% 94%; /* Off-white primary */
-    --primary-foreground: 0 0% 0%;
+    --primary: 40 100% 97%; /* Warm white primary */
+    --primary-foreground: 0 0% 7%;
 
-    --secondary: 0 0% 0%; /* Matte black secondary */
-    --secondary-foreground: 0 0% 94%;
+    --secondary: 0 0% 0%; /* Black secondary */
+    --secondary-foreground: 40 100% 97%;
 
     --muted: 0 0% 0%;
-    --muted-foreground: 0 0% 60%; /* Muted grey #999999 */
+    --muted-foreground: 30 56% 65%; /* Muted copper tone */
 
-    --accent: 0 0% 60%; /* Muted grey accent */
-    --accent-foreground: 0 0% 0%;
+    --accent: 30 56% 46%; /* Deep copper/bronze #B87333 */
+    --accent-foreground: 40 100% 97%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 40 100% 97%;
 
-    --border: 0 0% 15%;
+    --border: 30 56% 20%; /* Darker copper for borders */
     --input: 0 0% 0%;
-    --ring: 0 0% 60%;
+    --ring: 30 56% 46%;
 
     --radius: 0.75rem;
 
-    /* Smoky Minimalism Design Tokens */
-    --hero-gradient: linear-gradient(135deg, hsl(0 0% 29% / 0.1), hsl(0 0% 9% / 0.05));
-    --spotlight-gradient: radial-gradient(ellipse at center, hsl(0 0% 29% / 0.15) 0%, hsl(0 0% 9%) 70%);
-    --glow-subtle: 0 0% 60%;
+    /* Charcoal & Copper Design Tokens */
+    --hero-gradient: linear-gradient(135deg, hsl(30 56% 46% / 0.1), hsl(0 0% 7% / 0.05));
+    --spotlight-gradient: radial-gradient(ellipse at center, hsl(30 56% 46% / 0.12) 0%, hsl(0 0% 7%) 70%);
+    --glow-subtle: 30 56% 46%;
     --shadow-minimal: 0 0% 0%;
     
     /* Typography Scale */
