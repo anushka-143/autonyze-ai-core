@@ -7,42 +7,42 @@
 
 @layer base {
   :root {
-    /* Autonyze Brand Colors - Dark Minimal Futurism */
-    --background: 210 15% 14%; /* #232A33 - Main dark background */
-    --foreground: 210 40% 98%; /* Light text */
+    /* Autonyze Brand Colors - Ultra Minimal Grey Palette */
+    --background: 0 0% 8%; /* Pure dark background */
+    --foreground: 0 0% 98%; /* Pure white text */
 
-    --card: 213 15% 18%; /* #313540 - Card backgrounds */
-    --card-foreground: 210 40% 98%;
+    --card: 0 0% 12%; /* Dark grey card backgrounds */
+    --card-foreground: 0 0% 98%;
 
-    --popover: 213 15% 18%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 0 0% 12%;
+    --popover-foreground: 0 0% 98%;
 
-    --primary: 210 40% 98%; /* White/light primary */
-    --primary-foreground: 210 15% 14%;
+    --primary: 0 0% 98%; /* Pure white primary */
+    --primary-foreground: 0 0% 8%;
 
-    --secondary: 213 15% 25%; /* #3C4858 - Secondary surfaces */
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 0 0% 18%; /* Medium grey secondary */
+    --secondary-foreground: 0 0% 98%;
 
-    --muted: 213 15% 25%;
-    --muted-foreground: 210 20% 65%;
+    --muted: 0 0% 18%;
+    --muted-foreground: 0 0% 65%;
 
-    --accent: 210 60% 45%; /* Blue accent for highlights */
-    --accent-foreground: 210 40% 98%;
+    --accent: 0 0% 85%; /* Light grey accent for highlights */
+    --accent-foreground: 0 0% 8%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 213 15% 25%;
-    --input: 213 15% 25%;
-    --ring: 210 60% 45%;
+    --border: 0 0% 20%;
+    --input: 0 0% 18%;
+    --ring: 0 0% 85%;
 
     --radius: 0.75rem;
 
-    /* Autonyze Custom Design Tokens */
-    --hero-gradient: linear-gradient(135deg, hsl(210 40% 98% / 0.1), hsl(210 40% 98% / 0.05));
-    --spotlight-gradient: radial-gradient(ellipse at center, hsl(210 40% 98% / 0.15) 0%, transparent 70%);
-    --glow-blue: 210 100% 70%;
-    --glow-subtle: 210 60% 45%;
+    /* Autonyze Custom Design Tokens - Minimal Grey Palette */
+    --hero-gradient: linear-gradient(135deg, hsl(0 0% 95% / 0.1), hsl(0 0% 90% / 0.05));
+    --spotlight-gradient: radial-gradient(ellipse at center, hsl(0 0% 95% / 0.12) 0%, transparent 70%);
+    --glow-subtle: 0 0% 85%;
+    --shadow-minimal: 0 0% 5%;
     
     /* Typography Scale */
     --font-hero: 4.5rem;
@@ -51,9 +51,9 @@
     --font-subheading: 1.25rem;
     
     /* Shadows & Effects */
-    --shadow-glow: 0 0 40px hsl(var(--glow-blue) / 0.2);
-    --shadow-card: 0 8px 32px hsl(210 15% 8% / 0.3);
-    --shadow-elevated: 0 16px 64px hsl(210 15% 8% / 0.4);
+    --shadow-glow: 0 0 40px hsl(var(--shadow-minimal) / 0.4);
+    --shadow-card: 0 8px 32px hsl(0 0% 3% / 0.5);
+    --shadow-elevated: 0 16px 64px hsl(0 0% 2% / 0.6);
 
     --radius: 0.75rem;
 
