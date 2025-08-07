@@ -1,6 +1,9 @@
+import { useState } from "react";
 import { Phone, BookOpen, MapPin, Zap } from "lucide-react";
+import DemoBookingModal from "./DemoBookingModal";
 
 const SolutionsSection = () => {
+  const [isDemoModalOpen, setIsDemoModalOpen] = useState(false);
   const solutions = [
     {
       icon: Phone,
@@ -106,10 +109,18 @@ const SolutionsSection = () => {
           <p className="text-muted-foreground mb-6">
             Ready to see these solutions in action?
           </p>
-          <button className="cta-button">
+          <button 
+            className="cta-button"
+            onClick={() => setIsDemoModalOpen(true)}
+          >
             Schedule a Demo
           </button>
         </div>
+        
+        <DemoBookingModal 
+          isOpen={isDemoModalOpen} 
+          onClose={() => setIsDemoModalOpen(false)} 
+        />
       </div>
     </section>
   );

@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react";
-import { gsap } from "gsap";
+import DemoBookingModal from "./DemoBookingModal";
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isDemoModalOpen, setIsDemoModalOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -44,7 +45,10 @@ const Navigation = () => {
             <a href="#contact" className="text-muted-foreground hover:text-foreground transition-colors duration-200">
               Contact
             </a>
-            <button className="cta-button">
+            <button 
+              className="cta-button"
+              onClick={() => setIsDemoModalOpen(true)}
+            >
               Book Demo
             </button>
           </div>
@@ -59,6 +63,11 @@ const Navigation = () => {
           </button>
         </div>
       </div>
+      
+      <DemoBookingModal 
+        isOpen={isDemoModalOpen} 
+        onClose={() => setIsDemoModalOpen(false)} 
+      />
     </nav>
   );
 };
