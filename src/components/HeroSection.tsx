@@ -1,5 +1,6 @@
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Button } from "@/components/ui/button";
 
 const HeroSection = () => {
@@ -8,6 +9,7 @@ const HeroSection = () => {
   const orbsRef = useRef<(HTMLDivElement | null)[]>([]);
 
   useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
     const tl = gsap.timeline();
 
     // Spline fade in from top
@@ -34,6 +36,34 @@ const HeroSection = () => {
           yoyo: true,
           ease: "sine.inOut",
           delay: index * 0.3
+        });
+      }
+    });
+
+    // Parallax effect on Spline model during scroll
+    gsap.to(splineRef.current, {
+      yPercent: -20,
+      ease: "none",
+      scrollTrigger: {
+        trigger: splineRef.current,
+        start: "top bottom",
+        end: "bottom top",
+        scrub: true
+      }
+    });
+
+    // Parallax effect on floating orbs
+    orbsRef.current.forEach((orb, index) => {
+      if (orb) {
+        gsap.to(orb, {
+          yPercent: -30 - (index * 10),
+          ease: "none",
+          scrollTrigger: {
+            trigger: orb,
+            start: "top bottom",
+            end: "bottom top",
+            scrub: true
+          }
         });
       }
     });

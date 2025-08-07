@@ -1,19 +1,24 @@
 import { useState, useEffect } from "react";
+import { gsap } from "gsap";
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
+      const scrolled = window.scrollY > 50;
+      setIsScrolled(scrolled);
     };
+
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-background/80 backdrop-blur-md border-b border-border' : 'bg-transparent'
+      isScrolled 
+        ? 'bg-background/95 backdrop-blur-md shadow-lg border-b border-border' 
+        : 'bg-transparent'
     }`}>
       <div className="max-w-7xl mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
