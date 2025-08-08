@@ -7,71 +7,64 @@
 
 @layer base {
   :root {
-    /* Layered Grey Palette */
-    --background: 0 0% 9%; /* Charcoal #181818 */
-    --foreground: 0 0% 94%; /* Off-white #EFEFEF */
+    /* Purplish Neon Dark Theme */
+    --background: 270 17% 9%; /* Matte black-purple #18141C */
+    --foreground: 240 40% 98%; /* Ultra-bright off-white #F3F3FA */
 
-    --card: 214 19% 17%; /* Graphite #232A33 */
-    --card-foreground: 0 0% 94%;
+    --card: 271 38% 14%;
+    --card-foreground: 240 40% 98%;
 
-    --popover: 214 19% 17%;
-    --popover-foreground: 0 0% 94%;
+    --popover: 271 38% 14%;
+    --popover-foreground: 240 40% 98%;
 
-    --primary: 0 0% 94%; /* Off-white primary */
-    --primary-foreground: 0 0% 9%;
+    --primary: 278 100% 65%; /* Neon purple #BF4FFF */
+    --primary-foreground: 270 17% 9%;
 
-    --secondary: 0 0% 29%; /* Medium grey #4A4A4A */
-    --secondary-foreground: 0 0% 94%;
+    --secondary: 258 100% 34%; /* Deep indigo #3A0CA3 */
+    --secondary-foreground: 240 40% 98%;
 
-    --muted: 0 0% 29%;
-    --muted-foreground: 0 0% 60%; /* Muted grey #999999 */
+    --muted: 271 38% 14%;
+    --muted-foreground: 260 20% 80%; /* Lavender grey */
 
-    --accent: 0 0% 82%; /* Light grey accent #D1D1D1 */
-    --accent-foreground: 0 0% 9%;
+    --accent: 278 100% 65%; /* Neon purple #BF4FFF */
+    --accent-foreground: 270 17% 9%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 94%;
+    --destructive-foreground: 240 40% 98%;
 
-    --border: 0 0% 49%; /* Light grey for borders #7D7D7D */
-    --input: 214 19% 17%;
-    --ring: 0 0% 82%;
-
-    --radius: 0.75rem;
-
-    /* Layered Grey Design Tokens */
-    --hero-gradient: linear-gradient(135deg, hsl(0 0% 29% / 0.1), hsl(0 0% 9% / 0.05));
-    --spotlight-gradient: radial-gradient(ellipse at center, hsl(0 0% 49% / 0.15) 0%, hsl(0 0% 9%) 70%);
-    --glow-subtle: 0 0% 82%;
-    --shadow-minimal: 0 0% 5%;
-    
-    /* Typography Scale */
-    --font-hero: 4.5rem;
-    --font-display: 3rem;
-    --font-heading: 2rem;
-    --font-subheading: 1.25rem;
-    
-    /* Shadows & Effects */
-    --shadow-glow: 0 0 40px hsl(var(--shadow-minimal) / 0.4);
-    --shadow-card: 0 8px 32px hsl(0 0% 3% / 0.5);
-    --shadow-elevated: 0 16px 64px hsl(0 0% 2% / 0.6);
+    --border: 271 38% 20%;
+    --input: 271 38% 14%;
+    --ring: 278 100% 65%;
 
     --radius: 0.75rem;
 
-    --sidebar-background: 0 0% 98%;
+    /* Neon gradients and glows */
+    --hero-gradient: radial-gradient(ellipse at 50% 38%, hsl(258 100% 34% / 0.45), hsl(271 38% 14% / 0.1) 50%, transparent 70%);
+    --spotlight-gradient: radial-gradient(ellipse at center, hsl(278 100% 65% / 0.25) 0%, transparent 60%);
+    --glow-blue: 278 100% 65%; /* Used by glow keyframes */
+    --shadow-minimal: 270 17% 9%;
+    
+    --shadow-glow: 0 0 40px hsl(var(--accent) / 0.6);
+    --shadow-card: 0 8px 32px hsl(271 38% 10% / 0.6);
+    --shadow-elevated: 0 16px 64px hsl(278 100% 65% / 0.25);
 
-    --sidebar-foreground: 240 5.3% 26.1%;
+    --radius: 0.75rem;
 
-    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-background: 270 17% 9%;
 
-    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-foreground: 240 40% 98%;
 
-    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-primary: 278 100% 65%;
 
-    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-primary-foreground: 270 17% 9%;
 
-    --sidebar-border: 220 13% 91%;
+    --sidebar-accent: 271 38% 14%;
 
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-accent-foreground: 240 40% 98%;
+
+    --sidebar-border: 271 38% 20%;
+
+    --sidebar-ring: 278 100% 65%;
   }
 
   .dark {
@@ -122,11 +115,43 @@
     @apply bg-background text-foreground font-['Sora'] antialiased;
     font-feature-settings: 'rlig' 1, 'calt' 1;
     scroll-behavior: smooth;
+    position: relative;
+  }
+
+  /* Futuristic heading font */
+  h1, h2, h3, h4, .hero-title, .display-title {
+    font-family: 'Orbitron', 'Sora', ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, 'Helvetica Neue', Arial, 'Noto Sans', 'Apple Color Emoji', 'Segoe UI Emoji';
+    letter-spacing: 0.02em;
+  }
+
+  /* Optional gradient neon text helper */
+  .neon-gradient-text {
+    background-image: linear-gradient(90deg, hsl(var(--accent)), hsl(299 100% 50%));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 0 0 12px hsl(var(--accent) / 0.4);
+  }
+
+  /* Global animated neon background accents */
+  body::before {
+    content: "";
+    position: fixed;
+    inset: -20%;
+    z-index: 0;
+    pointer-events: none;
+    background:
+      radial-gradient(circle at 30% 20%, hsl(299 100% 50% / 0.10), transparent 35%),
+      radial-gradient(circle at 70% 60%, hsl(var(--accent) / 0.10), transparent 45%),
+      conic-gradient(from 0deg at 50% 50%, transparent 0 20%, hsl(258 100% 34% / 0.10) 20% 25%, transparent 25% 45%, hsl(299 100% 50% / 0.08) 45% 50%, transparent 50% 100%);
+    filter: blur(40px);
+    animation: neonSweep 14s linear infinite;
   }
 
   /* Custom utility classes */
   .hero-spotlight {
-    background: var(--spotlight-gradient);
+    background: radial-gradient(ellipse at 50% 40%, hsl(258 100% 34% / 0.55), transparent 65%);
+    box-shadow: 0 0 60px hsl(var(--accent) / 0.25);
   }
 
   .glow-blue {
@@ -193,36 +218,55 @@
     transform: translateY(-8px) scale(1.02);
   }
 
-  /* CTA button with enhanced glow effect */
+  /* CTA button - neon gradient + animated glow */
   .cta-button {
-    @apply bg-accent text-accent-foreground px-8 py-4 rounded-xl font-semibold transition-all duration-500;
-    box-shadow: 0 4px 20px hsl(var(--accent) / 0.3);
+    @apply text-primary-foreground px-8 py-4 rounded-xl font-semibold transition-all duration-500;
+    background-image: linear-gradient(135deg, hsl(var(--accent)), hsl(299 100% 50%));
+    border: 1px solid hsl(var(--accent));
+    box-shadow:
+      0 0 12px hsl(var(--accent) / 0.55),
+      0 0 32px hsl(299 100% 50% / 0.35);
     position: relative;
     overflow: hidden;
+    animation: neonPulse 3s ease-in-out infinite alternate;
   }
 
   .cta-button:hover {
-    box-shadow: 0 8px 32px hsl(var(--accent) / 0.6);
     transform: translateY(-4px) scale(1.05);
+    box-shadow:
+      0 0 16px hsl(var(--accent) / 0.7),
+      0 0 48px hsl(299 100% 50% / 0.45);
   }
 
   .cta-button::before {
     content: '';
     position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, hsl(var(--accent) / 0.3), transparent);
-    transition: left 0.5s;
+    inset: -2px;
+    background: conic-gradient(
+      from 0deg,
+      hsl(var(--accent)),
+      hsl(299 100% 50%),
+      hsl(var(--accent))
+    );
+    filter: blur(8px);
+    z-index: -1;
+    animation: neonRotate 8s linear infinite;
   }
 
-  .cta-button:hover::before {
-    left: 100%;
+  /* Neon variant for shadcn Button default */
+  .neon-button {
+    background-image: linear-gradient(135deg, hsl(var(--accent)), hsl(299 100% 50%));
+    border: 1px solid hsl(var(--accent));
+    box-shadow: 0 0 10px hsl(var(--accent) / 0.55), 0 0 24px hsl(299 100% 50% / 0.35);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .neon-button:hover {
+    box-shadow: 0 0 14px hsl(var(--accent) / 0.7), 0 0 36px hsl(299 100% 50% / 0.45);
+    transform: translateY(-2px);
   }
 }
 
-/* Keyframe animations */
 @keyframes float {
   0%, 100% { transform: translateY(0px); }
   50% { transform: translateY(-10px); }
@@ -244,4 +288,18 @@
   to {
     opacity: 1;
   }
+}
+
+/* Neon enhancements */
+@keyframes neonPulse {
+  0% { box-shadow: 0 0 8px hsl(var(--accent) / 0.35), 0 0 20px hsl(299 100% 50% / 0.2); }
+  100% { box-shadow: 0 0 18px hsl(var(--accent) / 0.6), 0 0 40px hsl(299 100% 50% / 0.35); }
+}
+
+@keyframes neonRotate { to { transform: rotate(360deg); } }
+
+@keyframes neonSweep {
+  0% { transform: translateY(0) rotate(0deg); opacity: 0.8; }
+  50% { transform: translateY(-2%) rotate(180deg); opacity: 0.6; }
+  100% { transform: translateY(0) rotate(360deg); opacity: 0.8; }
 }
